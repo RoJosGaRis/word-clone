@@ -1,0 +1,4 @@
+.guessInput {
+  display: flex;
+  flex-direction: column;
+}
