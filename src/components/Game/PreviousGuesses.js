@@ -9,10 +9,21 @@ const PreviousGuesses = ({ guesses }) => {
       <h3>Previous Guesses</h3>
       <ul className="previous_guesses_wrapper">
         {guesses.map((currentGuess, index) => {
+          console.log(currentGuess);
           return <PreviousGuess guess={currentGuess}></PreviousGuess>;
         })}
         {range(0 + guesses.length, NUM_OF_GUESSES_ALLOWED, 1).map(() => {
-          return <PreviousGuess guess={""}></PreviousGuess>;
+          return (
+            <PreviousGuess
+              guess={[
+                { letter: "", status: "" },
+                { letter: "", status: "" },
+                { letter: "", status: "" },
+                { letter: "", status: "" },
+                { letter: "", status: "" },
+              ]}
+            ></PreviousGuess>
+          );
         })}
       </ul>
     </div>
